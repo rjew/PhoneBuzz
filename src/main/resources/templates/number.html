@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lendup Coding Challenge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Lendup Coding Challenge</h1>
+<form action="#" th:action="@{/}" th:object="${number}" method="post">
+    <p>Enter your number (Format: 3237830974): <input type="tel" pattern="\d{10}" th:field="*{num}" /></p>
+    <p>Enter a time delay (seconds): <input type="number" min="0" th:field="*{delay}"/></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
